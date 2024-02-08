@@ -47,5 +47,6 @@ class OrderDetails : AppCompatActivity() {
             Toast.makeText(this, "Your total is: $total \n-------- \n$custDet ", Toast.LENGTH_SHORT).show()
         }
 
+
     }
 }

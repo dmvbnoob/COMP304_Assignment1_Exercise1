@@ -28,6 +28,7 @@ class OrderDetails : AppCompatActivity() {
         {
             val price = editTextPrice.text.toString().toDoubleOrNull()
             val qty = editTextQty.text.toString().toIntOrNull()
+            val prod = editTextProd.text.toString()
 
             if (price == null || price <= 0)
             {
@@ -43,8 +44,8 @@ class OrderDetails : AppCompatActivity() {
 
             val total = price * qty
 
-            textCustDet.text = "Your total is: $total \n-------- \n$custDet "
-            Toast.makeText(this, "Your total is: $total \n-------- \n$custDet ", Toast.LENGTH_SHORT).show()
+            textCustDet.text = "Your total is: $total \nOrder: $prod at CAD$price per unit ($qty units) \n-------- \n$custDet "
+            Toast.makeText(this, "Your total is: $total \nOrder: $prod at CAD$price per unit ($qty units) \n-------- \n$custDet ", Toast.LENGTH_SHORT).show()
         }
 
 
